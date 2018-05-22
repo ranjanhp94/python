@@ -1,21 +1,21 @@
-the_count = [1, 2, 3, 4, 5]
-fruits = ['apples', 'oranges', 'pears', 'apricots']
-change = [1, 'pennies', 2, 'dimes',3, 'quarters']
+ten_things = "Apples Oranges Crows Telephone Light Sugar"
 
-for number in the_count:
-    print(f"This is count {number}")
+print("Wait there's not ten things in that list, lets fix that.")
 
-for fruit in fruits:
-    print(f"A fruit of type {fruit}")
+stuff = ten_things.split(' ')
+more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
 
-for i in change:
-    print(f"I got {i}")
+while len(stuff) != 10:
+    next_one = more_stuff.pop()
+    print("Adding: ", next_one)
+    stuff.append(next_one)
+    print(f"There {len(stuff)} items now.")
 
-elements = []
+print("There we go: ", stuff)
 
-for i in range(0, 6):
-    print(f"Adding {i} to the list")
-    elements.append(i)
-
-for i in elements:
-    print(f"Elements was: {i}")
+print("Lets do something with stuff.")
+print(stuff[1])
+print(stuff[-1])
+print(stuff.pop())
+print(' '.join(stuff))
+print('#'.join(stuff[3:5]))
